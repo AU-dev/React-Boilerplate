@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
+import { Outlet as PageContent} from "react-router-dom";
 import './app.css';
-import ReactImage from './react.png';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
+// Outlet (PageContent) contains all the subroutes of '/' (aka all the content in whatever page you visit). Header and footer are always the same so theyre seperated out in the app component like this so they dont need to be rerendered when switching pages.
 export default class App extends Component {
-  state = { username: null };
-
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
-  }
 
   render() {
-    const { username } = this.state;
     return (
-      <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
-      </div>
+      <>
+      <Header />
+      <PageContent />
+      <Footer />
+      </>
+      
     );
   }
 }
