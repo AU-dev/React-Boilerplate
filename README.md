@@ -61,8 +61,10 @@ yarn start (or npm start)
 
 ### Folder Structure
 
-All the source code will be inside **src** directory. Inside src, there is client and server directory. All the frontend code (react, css, js and any other assets) will be in client directory. Backend Node.js/Express code will be in the server directory.
-
+All the source code will be inside **src** directory. Inside src, there is client and server directory. All the frontend code (react, css, js and any other assets) will be in client directory. 
+Subpages go in the pages folder folder, images in the images folder, and React components such as a Header or Footer go in the components folder.
+**Backend Node.js/Express code will be in the server directory.
+**
 ### Babel
 
 [Babel](https://babeljs.io/) helps us to write code in the latest version of JavaScript. If an environment does not support certain features natively, Babel will help us to compile those features down to a supported version. It also helps us to convert JSX to Javascript.
