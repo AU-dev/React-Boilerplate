@@ -70,6 +70,7 @@ Subpages go in the pages folder folder, images in the images folder, and React c
 We initialize the Express web server in **server.js** where we configure CORS, and initialize & run Express REST APIs.
 
 **Model**
+
 We model the database and tables we will connect to in the **models subfolder**. We handle configuration for MySQL database in models/index.js, and we create an example Sequelize data model in models/tutorial.model.js. (A model in sequalize is like a table in SQL, we're just defining the contents of the entries in that table.)
 
 **Controller**
@@ -77,14 +78,21 @@ We model the database and tables we will connect to in the **models subfolder**.
 After initializing Sequelize, we don’t need to write CRUD functions, Sequelize supports all of them:
 
 create a new Tutorial: create(object)
+
 find a Tutorial by id: findByPk(id)
+
 get all Tutorials: findAll()
+
 update a Tutorial by id: update(data, where: { id: id })
+
 remove a Tutorial: destroy(where: { id: id })
+
 remove all Tutorials: destroy(where: {})
+
 find all Tutorials by title: findAll({ where: { title: ... } })
+
 These functions will be used in our Controller.
-many of these functions are defined in the controllers folder, with an example that has comments describing each function
+many of these functions are defined in the controllers folder, with an example that has comments describing each function.
 
 
 ### Babel
