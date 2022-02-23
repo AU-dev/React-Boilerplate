@@ -69,6 +69,10 @@ Subpages go in the pages folder folder, images in the images folder, and React c
 #### The Server Directory
 We initialize the Express web server in **server.js** where we configure CORS, and initialize & run Express REST APIs.
 
+**Config**
+
+We include the 5 parameters for connecting to the database in **server/config/db.config.js**. These 5 parameters are Host, User, Password, DB, and dialect.
+
 **Model**
 
 We model the database and tables we will connect to in the **models subfolder**. We handle configuration for MySQL database in models/index.js, and we create an example Sequelize data model in models/tutorial.model.js. (A model in sequalize is like a table in SQL, we're just defining the contents of the entries in that table.)
