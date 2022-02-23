@@ -23,13 +23,14 @@ app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the app." });
-});
 
-//example using a route from the routes folder
-// require('./routes/exampleRoute')(app);
+// simple route
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to the app." });
+// });
+
+//example using routes from the routes folder
+require("./routes/tutorial.routes")(app);
 
 //This line has the server (with express) initialized to listen on the port
 app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));
