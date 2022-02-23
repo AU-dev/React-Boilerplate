@@ -5,6 +5,7 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+<!-- list URLs in the sitemap here -->
 <url>
   <loc></loc>
   <lastmod></lastmod>
