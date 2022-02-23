@@ -65,6 +65,27 @@ All the source code will be inside **src** directory. Inside src, there is clien
 Subpages go in the pages folder folder, images in the images folder, and React components such as a Header or Footer go in the components folder.
 **Backend Node.js/Express code will be in the server directory.
 **
+
+#### The Server Directory
+We initialize the Express web server in **server.js** where we configure CORS, and initialize & run Express REST APIs.
+
+**Model**
+We model the database and tables we will connect to in the **models subfolder**. We handle configuration for MySQL database in models/index.js, and we create an example Sequelize data model in models/tutorial.model.js. (A model in sequalize is like a table in SQL, we're just defining the contents of the entries in that table.)
+
+**Controller**
+After initializing Sequelize, we don’t need to write CRUD functions, Sequelize supports all of them:
+
+create a new Tutorial: create(object)
+find a Tutorial by id: findByPk(id)
+get all Tutorials: findAll()
+update a Tutorial by id: update(data, where: { id: id })
+remove a Tutorial: destroy(where: { id: id })
+remove all Tutorials: destroy(where: {})
+find all Tutorials by title: findAll({ where: { title: ... } })
+These functions will be used in our Controller.
+many of these functions are defined in the controllers folder, with an example that has comments describing each function
+
+
 ### Babel
 
 [Babel](https://babeljs.io/) helps us to write code in the latest version of JavaScript. If an environment does not support certain features natively, Babel will help us to compile those features down to a supported version. It also helps us to convert JSX to Javascript.
