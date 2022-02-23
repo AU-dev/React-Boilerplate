@@ -73,6 +73,7 @@ We initialize the Express web server in **server.js** where we configure CORS, a
 We model the database and tables we will connect to in the **models subfolder**. We handle configuration for MySQL database in models/index.js, and we create an example Sequelize data model in models/tutorial.model.js. (A model in sequalize is like a table in SQL, we're just defining the contents of the entries in that table.)
 
 **Controller**
+
 After initializing Sequelize, we don’t need to write CRUD functions, Sequelize supports all of them:
 
 create a new Tutorial: create(object)
